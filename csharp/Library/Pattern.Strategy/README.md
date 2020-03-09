@@ -1,0 +1,3 @@
+﻿## Strategy pattern to  handle different file formats when reading parameters for a service.
+This is a simplified version of an implementation of the strategy pattern used in a project where i needed to parse a file containing parameters for a certain system.
+There is a strategy for JSON and for XML. Because I occasionally needed to get the file contents as a plain string I also implemented a method for that in an abstract base class (this code would be the same regardless of the file format).
