@@ -1,6 +1,7 @@
 ﻿using Pattern.Strategy.Abstractions;
 using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Text;
 
 namespace Pattern.Strategy.Implementations
@@ -12,7 +13,10 @@ namespace Pattern.Strategy.Implementations
 
         public string GetFileContentsAsString(string filePath)
         {
-
+            using (StreamReader sr = File.OpenText(filePath))
+            {
+                return sr.ReadToEnd();
+            }
         }
     }
 }
