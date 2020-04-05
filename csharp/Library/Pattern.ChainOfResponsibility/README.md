@@ -11,6 +11,6 @@ At first glance this refactoring might look like a lot more code to write for th
 
 One of the reasons I refactored this code was that it quite often was subject to change because stakeholders changed the formula for different reasons. Everytime it changed the code got more complex, cyclomatic complexity in the conditionals increased and the whole method got harder to overview. In other words, it started to "smell".
 
-So, the refactoring (even though it adds more code) gives us cleaner code that is very easy to change or extend without having to violate SRP or Open/Close principles.
+So, the refactoring (even though it adds more code) gives us cleaner code that is very easy to maintain or extend without having to violate SRP or Open/Close principles. It also makes the code much, MUCH! easier to test. Every rule can be tested in isolation. 
 
 Some might argue that the method was much easier to interpret and understand when you could look at it in its entirety in the original solution. This might be partly true in this simplified version. But, if you have a look at how I construct the chain of rules/handlers it really gives a good overview which simplifies understanding of the code for any potential other programmers not familiar with it.
